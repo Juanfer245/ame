@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" types="text/css" href="../img/login.css">
+    <link rel="stylesheet" types="text/css" href="../img/cabecera.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+</head>
+<body>
+   <form action="../Controlador/validar.php" method="post">
+   <h1 class="animate__animated animate__backInLeft">Sistema de login</h1>
+   <p>Ingrese su codigo del curso <input type="text" placeholder="ingrese su codigo del curso" name="codigo_curso"></p>
+   <p>Ingrese su cedula del estudiante <input type="password" placeholder="ingrese su numero de cedula" name="cedula_estudiante"></p>
+   <input type="submit" value="Ingresar" style="cursor: pointer; border-radius: 5px; color: #000;">
+   <a class="btn btn-info mt-2" href="../Vista/index.php" style="width: 400px; height: 42px;
+   background: #48e; border: none; color: #000;"> Crea una cuenta </a>
+   </form> 
+</body>
+</html>
