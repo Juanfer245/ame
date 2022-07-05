@@ -1,0 +1,64 @@
+{
+  "_from": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball",
+  "_id": "livereload@0.4.4",
+  "_inBundle": false,
+  "_integrity": "sha512-jrktDiK2fwnEZJSlcQmIfEpT7v7a+uqMlmQmNdJZ5Pwc6hm/aeiHWsZg0QtMHlOZy81wMYfgmhS44gsmBuI4Qg==",
+  "_location": "/livereload",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball",
+  "_shasum": "83ffa392ab2acff8e1f61507d9f387d32c0c9cab",
+  "_spec": "https://www.atom.io/api/packages/livereload/versions/0.4.4/tarball",
+  "_where": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\apm-install-dir-2021613-27480-129r9y9.jci4",
+  "bugs": {
+    "url": "https://github.com/taggon/livereload/issues"
+  },
+  "bundleDependencies": false,
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "contributors": [
+    {
+      "name": "Taegon Kim",
+      "email": "gonom9@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "chokidar": "^1.2.0",
+    "faye-websocket": "^0.10.0",
+    "livereload-js": "^2.2.2",
+    "lodash": "^3.10.0"
+  },
+  "deprecated": false,
+  "description": "Livereload plugin for Atom",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/taggon/livereload",
+  "keywords": [
+    "livereload",
+    "dev"
+  ],
+  "license": "MIT",
+  "main": "./lib/livereload",
+  "name": "livereload",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taggon/livereload.git"
+  },
+  "version": "0.4.4"
+}

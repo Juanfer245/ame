@@ -1,0 +1,126 @@
+{
+	"name": "npm-helper",
+	"displayName": "NPM Helper",
+	"main": "./out/extension.js",
+	"description": "Track changes on packages.json and show restore warning if need.",
+	"version": "1.1.4",
+	"publisher": "karanba",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/karanba/npm-helper.git"
+	},
+	"bugs": {
+		"url": "https://github.com/karanba/npm-helper/issues"
+	},
+	"homepage": "https://github.com/karanba/npm-helper/blob/master/README.md",
+	"icon": "images/logo.png",
+	"galleryBanner": {
+		"color": "#96DFFF",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"keywords": [
+		"npm",
+		"packages.json",
+		"install",
+		"npm install",
+		"restore"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:./package.json",
+		"onCommand:dependencies.refreshEntry"
+	],
+	"contributes": {
+		"configuration": [
+			{
+				"type": "object",
+				"title": "NPM Helper",
+				"properties": {}
+			}
+		],
+		"views": {
+			"explorer": [
+				{
+					"id": "dependencies",
+					"name": "Dependencies",
+					"when": ""
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "dependencies.checkRestore",
+				"title": "Check npm packages",
+				"category": "npm"
+			},
+			{
+				"command": "dependencies.refreshEntry",
+				"title": "npm helper: Refresh",
+				"icon": {
+					"light": "resources/svg/folder.svg",
+					"dark": "resources/svg/folder.svg"
+				}
+			},
+			{
+				"command": "dependencies.goToHome",
+				"title": "Go to homepage",
+				"category": "NPM Helper"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "",
+					"command": "dependencies.checkRestore",
+					"group": "npm"
+				}
+			],
+			"view/item/context": [
+				{
+					"group": "npm helper",
+					"command": "dependencies.goToHome",
+					"when": "viewItem == module"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "dependencies.checkRestore",
+				"key": "ctrl+alt+r",
+				"mac": "cmd+alt+r",
+				"when": ""
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"test": "node ./node_modules/vscode/bin/test",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"@types/semver": "^5.5.0",
+		"compare-versions": "^3.4.0",
+		"eslint": "^5.13.0",
+		"tslint": "^5.13.1",
+		"typescript": "^3.3.3333",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"semver": "^5.6.0"
+	},
+	"__metadata": {
+		"id": "690ea99e-0792-4751-a07a-25ea39d71606",
+		"publisherId": "0c15e016-0d49-45cd-bd7e-b88f3100d102",
+		"publisherDisplayName": "karanba",
+		"installedTimestamp": 1630539584438
+	}
+}

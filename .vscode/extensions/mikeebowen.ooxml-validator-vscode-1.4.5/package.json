@@ -1,0 +1,156 @@
+{
+	"name": "ooxml-validator-vscode",
+	"displayName": "OOXML Validator",
+	"description": "A VS Code extension for validating Office Open XML files",
+	"icon": "assets/icon.png",
+	"version": "1.4.5",
+	"publisher": "mikeebowen",
+	"homepage": "https://github.com/mikeebowen/ooxml-validator-vscode/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikeebowen/ooxml-validator-vscode.git"
+	},
+	"bugs": {
+		"url": "https://github.com/mikeebowen/ooxml-validator-vscode/issues"
+	},
+	"engines": {
+		"vscode": "^1.59.0"
+	},
+	"keywords": [
+		"ooxml"
+	],
+	"categories": [
+		"Other",
+		"Testing"
+	],
+	"activationEvents": [
+		"onCommand:ooxml-validator-vscode.validateOOXML"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "OOXML",
+			"properties": {
+				"ooxml.fileFormatVersion": {
+					"type": "number",
+					"description": "Number that specifies the version of Office to use to validate OOXML files. Must be in [2007, 2010, 2013, 2016, 2019]. Defaults to 2019"
+				},
+				"ooxml.outPutFilePath": {
+					"type": "string",
+					"description": "Specifies the absolute path to write the output of the validator. Path MUST be absolute"
+				},
+				"ooxml.overwriteLogFile": {
+					"type": "boolean",
+					"default": false,
+					"description": "If true, the log file will overwrite previous log files of the same name if they exist, default is false."
+				},
+				"ooxml.dotNetPath": {
+					"type": "string",
+					"description": "The absolute path to the .Net Runtime"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "ooxml-validator-vscode.validateOOXML",
+				"title": "Validate OOXML",
+				"when": "resourceLangId == ooxml",
+				"icon": {
+					"dark": "./assets/clipboard-check-solid-dark.svg",
+					"light": "./assets/clipboard-check-solid-light.svg"
+				}
+			}
+		],
+		"languages": [
+			{
+				"id": "ooxml",
+				"extensions": [
+					"docx",
+					"docm",
+					"dotm",
+					"dotx",
+					"pptx",
+					"pptm",
+					"potm",
+					"potx",
+					"ppam",
+					"ppsm",
+					"ppsx",
+					"xlsx",
+					"xlsm",
+					"xltm",
+					"xltx",
+					"xlam"
+				]
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceLangId == ooxml",
+					"command": "ooxml-validator-vscode.validateOOXML",
+					"title": "Validate OOXML",
+					"group": "3_compare"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack --mode development",
+		"watch": "webpack --mode development --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "npm run test-compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"coverage": "rimraf .nyc_output && node ./out/test/runCoverage.js"
+	},
+	"devDependencies": {
+		"@istanbuljs/nyc-config-typescript": "^1.0.1",
+		"@types/chai": "^4.2.15",
+		"@types/form-data": "^2.5.0",
+		"@types/glob": "^7.1.4",
+		"@types/istanbul": "^0.4.30",
+		"@types/lodash": "^4.14.172",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "^12.20.11",
+		"@types/sinon": "^9.0.11",
+		"@types/vscode": "^1.59.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"chai": "^4.3.4",
+		"chai-shallow-deep-equal": "^1.4.6",
+		"coveralls": "^3.1.1",
+		"electron-rebuild": "^2.3.5",
+		"eslint": "^7.21.0",
+		"glob": "^7.1.6",
+		"lodash": "^4.17.21",
+		"mocha": "^9.2.0",
+		"mocha-lcov-reporter": "^1.3.0",
+		"nyc": "^15.1.0",
+		"rimraf": "^3.0.2",
+		"sinon": "^10.0.0",
+		"source-map-support": "^0.5.19",
+		"ts-loader": "^8.0.14",
+		"ts-node": "^10.2.0",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0",
+		"webpack": "^5.19.0",
+		"webpack-cli": "^4.4.0"
+	},
+	"dependencies": {
+		"csv-writer": "^1.6.0"
+	},
+	"__metadata": {
+		"id": "b7c9396d-fbae-4610-92aa-c91861c692a3",
+		"publisherId": "e63ef7e6-0eec-4770-9f66-168a6141c58c",
+		"publisherDisplayName": "Michael Bowen",
+		"targetPlatform": "undefined",
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1649958386605
+	}
+}

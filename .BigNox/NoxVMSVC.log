@@ -1,0 +1,30 @@
+39:23:53.839584 MainPower Log continuation - Log started 2022-07-02T20:32:50.999520300Z
+39:23:54.713504 dns-monitor HostDnsMonitor::updateInfo
+39:23:54.713504 dns-monitor HostDnsMonitor: old information
+39:23:54.713504 dns-monitor   server 1: 200.124.235.194
+39:23:54.713504 dns-monitor   server 2: 200.124.235.195
+39:23:54.713504 dns-monitor   server 3: 200.124.235.196
+39:23:54.713504 dns-monitor   domain: cpe.gye.telmex.ec.intranet
+39:23:54.713504 dns-monitor   no search string entries
+39:23:54.713504 dns-monitor HostDnsMonitor: new information
+39:23:54.713504 dns-monitor   no server entries
+39:23:54.713504 dns-monitor   no domain set
+39:23:54.713504 dns-monitor   no search string entries
+39:23:57.519254 dns-monitor HostDnsMonitor::updateInfo
+39:23:57.519254 dns-monitor HostDnsMonitor: old information
+39:23:57.519254 dns-monitor   no server entries
+39:23:57.519254 dns-monitor   no domain set
+39:23:57.519254 dns-monitor   no search string entries
+39:23:57.519254 dns-monitor HostDnsMonitor: new information
+39:23:57.519254 dns-monitor   server 1: 200.124.235.194
+39:23:57.519254 dns-monitor   server 2: 200.124.235.195
+39:23:57.519254 dns-monitor   server 3: 200.124.235.196
+39:23:57.519254 dns-monitor   domain: cpe.gye.telmex.ec.intranet
+39:23:57.519254 dns-monitor   no search string entries
+39:32:06.268635 main     VirtualBox: object deletion starts
+39:32:06.271572 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={88888888-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium 'C:\Program Files (x86)\Nox\bin\data\base7\Snapshots/{7caf6210-afd8-4c70-a492-40fff835f21a}.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+39:32:06.273598 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={88888888-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium 'C:\Program Files (x86)\Nox\bin\BignoxVMS\nox\Snapshots\{52a52b9a-731c-4758-be39-a943fae33548}.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+39:32:06.273598 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={88888888-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium 'C:\Program Files (x86)\Nox\bin\data\base7\base7-disk1.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+39:32:06.278582 main     ERROR [COM]: aRC=VBOX_E_OBJECT_IN_USE (0x80bb000c) aIID={88888888-43e0-e9d0-82e8-ceb307940dda} aComponent={MediumWrap} aText={Medium 'C:\Program Files (x86)\Nox\bin\BignoxVMS\nox\nox-disk2.vmdk' cannot be closed because it is still attached to 1 virtual machines}, preserve=false aResultDetail=0
+39:32:06.285655 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={88888888-f1a1-448a-10c5-e12f5285adad} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+39:32:06.286685 main     VirtualBox: object deleted

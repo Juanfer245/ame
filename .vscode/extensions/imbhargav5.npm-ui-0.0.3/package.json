@@ -1,0 +1,72 @@
+{
+	"name": "npm-ui",
+	"displayName": "npm-ui",
+	"description": "Ui for package.json",
+	"version": "0.0.3",
+	"publisher": "imbhargav5",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imbhargav5/npm-ui"
+	},
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:package.json"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.sayHello",
+				"title": "Hello World"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "package-manager",
+					"title": "Package Manager",
+					"icon": "resources/icon.svg"
+				}
+			]
+		},
+		"views": {
+			"package-manager": [
+				{
+					"id": "package-scripts",
+					"name": "Scripts"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"tslint": "^5.8.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"@types/lodash.capitalize": "4.2.3",
+		"@types/read-pkg-up": "3.0.1",
+		"lodash.capitalize": "4.2.1",
+		"read-pkg-up": "4.0.0"
+	},
+	"__metadata": {
+		"id": "753f1f89-c8b1-46ad-9284-ec4d7b2a4d7a",
+		"publisherId": "a2f5d658-b35c-45a6-a476-96670e868fa1",
+		"publisherDisplayName": "Bhargav Ponnapalli",
+		"installedTimestamp": 1630539588254
+	}
+}

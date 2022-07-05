@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #066;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 35px;
+    font-style: italic;
+}
+
+body {
+    background-image: radial-gradient(circle at 50% -20.71%, #ffffa1 0, #f5ffa0 6.25%, #e4ffa0 12.5%, #d2ffa1 18.75%, #bdffa3 25%, #a7fda6 31.25%, #8cfaaa 37.5%, #6cf7af 43.75%, #3cf2b5 50%, #00edbc 56.25%, #00e8c6 62.5%, #00e4d0 68.75%, #00dfdc 75%, #00dbe9 81.25%, #00d7f5 87.5%, #00d3ff 93.75%, #00d0ff 100%);
+    border-top: 3px solid;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+}
+
+form {
+    opacity: 0.8;
+    background: linear-gradient( 180deg, rgb(233, 232, 232) 0%, rgb(122, 122, 122) 50%);
+    border: 3px solid #066;
+    font-weight: 700;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 2.5em;
+    width: 50%;
+    height: 175px;
+}
+
+label {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+input {
+    text-align: center;
+    font-size: 15px;
+    color: #066;
+}
+
+.enviar¨ {}
